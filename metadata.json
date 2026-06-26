@@ -1,0 +1,6 @@
+{
+  "name": "Zorae.ai Domain Portfolio",
+  "description": "Interactive landing page and valuation portal for the premium domain zorae.ai, featuring immersive visual storytelling and an AI-powered brand evaluation companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
