@@ -1,14 +1,13 @@
 'use client';
 
-import { ArrowRight, Coins, MessageSquare, Sparkles } from 'lucide-react';
+import { ArrowRight, Coins, Sparkles } from 'lucide-react';
 import { domainStats } from '../data';
 
 interface HeroSectionProps {
   onAcquireClick: () => void;
-  onAdvisorClick: () => void;
 }
 
-export default function HeroSection({ onAcquireClick, onAdvisorClick }: HeroSectionProps) {
+export default function HeroSection({ onAcquireClick }: HeroSectionProps) {
   return (
     <section className="relative pt-28 pb-24 md:pt-36 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
       <div className="hero-badge inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full px-4 py-1.5 text-xs text-cyan-300 font-mono mb-8 backdrop-blur-sm">
@@ -36,13 +35,7 @@ export default function HeroSection({ onAcquireClick, onAdvisorClick }: HeroSect
           Acquire Domain
           <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
         </button>
-        <button
-          onClick={onAdvisorClick}
-          className="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-gray-300 font-semibold flex items-center justify-center gap-2 hover:bg-white/10 hover:text-white border border-white/10 active:scale-[0.98] transition-all duration-300 cursor-pointer"
-        >
-          <MessageSquare className="w-5 h-5 text-purple-400" />
-          Talk to AI Advisor
-        </button>
+
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 w-full">

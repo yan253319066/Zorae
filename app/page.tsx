@@ -5,20 +5,14 @@ import HeroSection from './components/HeroSection';
 import ValueProposition from './components/ValueProposition';
 import BentoGrid from './components/BentoGrid';
 import BrandShowcase from './components/BrandShowcase';
-import ChatbotSection from './components/ChatbotSection';
 import AcquisitionDesk from './components/AcquisitionDesk';
 import Footer from './components/Footer';
-import { useScrollAnimations } from './hooks/useScrollAnimations';
-import { useChat } from './hooks/useChat';
-import { useOffer } from './hooks/useOffer';
 import { useState } from 'react';
+import { useScrollAnimations } from './hooks/useScrollAnimations';
+import { useOffer } from './hooks/useOffer';
 
 export default function Home() {
-  const { containerRef, heroRef, bentoRef, chatbotRef } = useScrollAnimations();
-  const {
-    chatInput, setChatInput, messages, isTyping,
-    handleSendMessage, appendAssistantMessage, setUserStartupIdea
-  } = useChat();
+  const { containerRef, heroRef, bentoRef } = useScrollAnimations();
   const {
     offerName, setOfferName, offerEmail, setOfferEmail,
     offerAmount, setOfferAmount, offerVision, setOfferVision,
@@ -28,22 +22,8 @@ export default function Home() {
 
   const [activeBrandTab, setActiveBrandTab] = useState<string>('labs');
 
-  const applyBrandingIdea = (ideaText: string) => {
-    setUserStartupIdea(ideaText);
-    handleSendMessage(undefined, `I am planning to launch ${ideaText}. Can you explain why zorae.ai is a perfect match and brainstorm brand angles for it?`);
-    document.getElementById('ai-advisor')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const onOfferSubmit = async (e: React.FormEvent) => {
-    const offer = await handleOfferSubmit(e);
-    if (offer) {
-      setTimeout(() => {
-        appendAssistantMessage(
-          `**Fantastic Offer Received!**\n\nI noticed you submitted an acquisition offer of **$${offer.amount.toLocaleString()} USD** for **zorae.ai**.\n\nYour contact email is **${offer.email}**. We will analyze this proposal and get back to you within 12 hours. Would you like to discuss any custom terms or share more about your branding goals for Zorae?`
-        );
-        document.getElementById('ai-advisor')?.scrollIntoView({ behavior: 'smooth' });
-      }, 1500);
-    }
+    await handleOfferSubmit(e);
   };
 
   return (
@@ -60,7 +40,6 @@ export default function Home() {
       <section ref={heroRef}>
         <HeroSection
           onAcquireClick={() => document.getElementById('offer-desk')?.scrollIntoView({ behavior: 'smooth' })}
-          onAdvisorClick={() => document.getElementById('ai-advisor')?.scrollIntoView({ behavior: 'smooth' })}
         />
       </section>
 
@@ -73,19 +52,7 @@ export default function Home() {
       <BrandShowcase
         activeBrandTab={activeBrandTab}
         onTabChange={setActiveBrandTab}
-        onPitchIdea={applyBrandingIdea}
       />
-
-      <section ref={chatbotRef}>
-        <ChatbotSection
-          messages={messages}
-          isTyping={isTyping}
-          chatInput={chatInput}
-          onChatInputChange={setChatInput}
-          onSendMessage={handleSendMessage}
-          onPitchNiche={applyBrandingIdea}
-        />
-      </section>
 
       <AcquisitionDesk
         offerName={offerName}

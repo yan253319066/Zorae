@@ -12,7 +12,6 @@ export function useScrollAnimations() {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const bentoRef = useRef<HTMLDivElement>(null);
-  const chatbotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -148,18 +147,6 @@ export function useScrollAnimations() {
         }
       );
 
-      gsap.fromTo('.chat-section-container',
-        { opacity: 0, scale: 0.98 },
-        {
-          opacity: 1, scale: 1, duration: 1,
-          scrollTrigger: {
-            trigger: '.chat-section',
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-          }
-        }
-      );
-
       gsap.fromTo('.acq-left',
         { opacity: 0, x: -30 },
         {
@@ -198,5 +185,5 @@ export function useScrollAnimations() {
     }
   }, []);
 
-  return { containerRef, heroRef, bentoRef, chatbotRef };
+  return { containerRef, heroRef, bentoRef };
 }
