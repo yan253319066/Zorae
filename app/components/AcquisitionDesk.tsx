@@ -9,6 +9,8 @@ interface AcquisitionDeskProps {
   offerAmount: string;
   offerVision: string;
   submittedOffer: boolean;
+  submitError: string | null;
+  submitting: boolean;
   localOffers: Offer[];
   onNameChange: (v: string) => void;
   onEmailChange: (v: string) => void;
@@ -20,7 +22,7 @@ interface AcquisitionDeskProps {
 
 export default function AcquisitionDesk({
   offerName, offerEmail, offerAmount, offerVision,
-  submittedOffer, localOffers,
+  submittedOffer, submitError, submitting, localOffers,
   onNameChange, onEmailChange, onAmountChange, onVisionChange,
   onSubmit, onReset
 }: AcquisitionDeskProps) {
@@ -94,8 +96,13 @@ export default function AcquisitionDesk({
                 <div className="space-y-2">
                   <h4 className="text-2xl font-display font-bold text-white">Inquiry Successfully Lodged</h4>
                   <p className="text-sm text-gray-400 max-w-md mx-auto leading-relaxed">
-                    Thank you! Your acquisition proposal has been signed into our database. We have triggered an automatic appraisal and will reach out to you within 12 hours.
+                    Thank you! Your acquisition proposal has been received. We will review and reach out to you within 12 hours.
                   </p>
+                  {submitError && (
+                    <p className="text-xs text-amber-400 bg-amber-400/5 border border-amber-400/20 rounded-lg px-3 py-2 max-w-md mx-auto">
+                      {submitError}
+                    </p>
+                  )}
                 </div>
                 <button
                   onClick={onReset}
@@ -146,10 +153,13 @@ export default function AcquisitionDesk({
                     className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500/40 transition-all font-sans leading-relaxed resize-none" />
                 </div>
 
-                <button type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:brightness-110 active:scale-98 shadow-lg shadow-cyan-500/10 cursor-pointer transition-all duration-200">
-                  <Coins className="w-4 h-4" />
-                  Submit Secure Proposal
+                <button type="submit" disabled={submitting}
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:brightness-110 active:scale-98 shadow-lg shadow-cyan-500/10 cursor-pointer transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                  {submitting ? (
+                    <>Processing...</>
+                  ) : (
+                    <><Coins className="w-4 h-4" />Submit Secure Proposal</>
+                  )}
                 </button>
               </form>
             )}

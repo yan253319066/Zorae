@@ -22,7 +22,8 @@ export default function Home() {
   const {
     offerName, setOfferName, offerEmail, setOfferEmail,
     offerAmount, setOfferAmount, offerVision, setOfferVision,
-    submittedOffer, setSubmittedOffer, localOffers, handleOfferSubmit
+    submittedOffer, setSubmittedOffer, submitError, submitting,
+    localOffers, handleOfferSubmit, resetForm
   } = useOffer();
 
   const [activeBrandTab, setActiveBrandTab] = useState<string>('labs');
@@ -33,12 +34,12 @@ export default function Home() {
     document.getElementById('ai-advisor')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const onOfferSubmit = (e: React.FormEvent) => {
-    const result = handleOfferSubmit(e);
-    if (result) {
+  const onOfferSubmit = async (e: React.FormEvent) => {
+    const offer = await handleOfferSubmit(e);
+    if (offer) {
       setTimeout(() => {
         appendAssistantMessage(
-          `**Fantastic Offer Received!**\n\nI noticed you submitted an acquisition offer of **$${result.amount.toLocaleString()} USD** for **zorae.ai**.\n\nYour contact email is **${result.email}**. We will analyze this proposal and get back to you within 12 hours. Would you like to discuss any custom terms or share more about your branding goals for Zorae?`
+          `**Fantastic Offer Received!**\n\nI noticed you submitted an acquisition offer of **$${offer.amount.toLocaleString()} USD** for **zorae.ai**.\n\nYour contact email is **${offer.email}**. We will analyze this proposal and get back to you within 12 hours. Would you like to discuss any custom terms or share more about your branding goals for Zorae?`
         );
         document.getElementById('ai-advisor')?.scrollIntoView({ behavior: 'smooth' });
       }, 1500);
@@ -92,13 +93,15 @@ export default function Home() {
         offerAmount={offerAmount}
         offerVision={offerVision}
         submittedOffer={submittedOffer}
+        submitError={submitError}
+        submitting={submitting}
         localOffers={localOffers}
         onNameChange={setOfferName}
         onEmailChange={setOfferEmail}
         onAmountChange={setOfferAmount}
         onVisionChange={setOfferVision}
         onSubmit={onOfferSubmit}
-        onReset={() => setSubmittedOffer(false)}
+        onReset={resetForm}
       />
 
       <Footer />

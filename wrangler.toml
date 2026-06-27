@@ -1,0 +1,13 @@
+name = "zorae-website"
+pages_build_output_dir = ".vercel/output/static"
+
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "zorae-offers"
+database_id = "2715d400-c2d5-4096-bc05-245b33deba53"
+
+[vars]
+NODE_VERSION = "22"
