@@ -1,7 +1,5 @@
 import type {NextConfig} from 'next';
 
-const cfBuild = process.env.CF_PAGES === 'true';
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -21,7 +19,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: cfBuild ? undefined : 'standalone',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.

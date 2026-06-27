@@ -8,11 +8,11 @@
     "start": "next start",
     "lint": "eslint .",
     "clean": "next clean",
-    "cf:dev": "wrangler pages dev . --d1 DB=zorae-offers --compatibility-flag nodejs_compat",
-    "cf:build": "set CF_PAGES=true&& next build",
+    "cf:dev": "npx @cloudflare/next-on-pages@1 && wrangler pages dev .vercel/output/static --d1 DB=zorae-offers --compatibility-flag nodejs_compat",
+    "cf:build": "npx @cloudflare/next-on-pages@1",
     "cf:migrate": "wrangler d1 migrations apply zorae-offers",
     "cf:migrate:local": "wrangler d1 migrations apply zorae-offers --local",
-    "cf:deploy": "wrangler pages deploy"
+    "cf:deploy": "wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
