@@ -56,13 +56,24 @@ export function useOffer() {
       });
 
       if (!res.ok) {
-        throw new Error(`Server error: ${res.status}`);
+        let detail = `Server error: ${res.status}`;
+        try {
+          const errBody = await res.json();
+          if (errBody?.error) detail = errBody.error;
+        } catch {}
+        throw new Error(detail);
       }
 
       savedOffer = await res.json();
     } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      const isNetworkErr = message === 'Failed to fetch' || message.includes('NetworkError') || message.includes('network');
       console.warn('D1 submit failed, falling back to localStorage', err);
-      setSubmitError('Server unreachable — saved locally. Will sync when online.');
+      setSubmitError(
+        isNetworkErr
+          ? 'Server unreachable — saved locally. Will sync when online.'
+          : `${message} — saved locally. Will sync when online.`,
+      );
 
       savedOffer = {
         id: Math.random().toString(36).substring(2, 9),
