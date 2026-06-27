@@ -6,7 +6,7 @@ export default function Footer() {
           zorae<span className="text-gradient-cyan-purple font-black">.ai</span>
         </div>
         <p className="text-xs text-gray-500 max-w-md mx-auto leading-relaxed">
-          This landing page is a premium property showcase. The domain name **zorae.ai** is currently active and open for secure transactional transfer under safe escrow regulations.
+          This landing page is a premium property showcase. The domain name zorae.ai is currently active and open for secure transactional transfer under safe escrow regulations.
         </p>
         <div className="text-[10px] font-mono text-gray-600 pt-4">
           &copy; {new Date().getFullYear()} Zorae.ai Domain Portfolio. All Rights Reserved. Managed under Secure Escrow Protocols.

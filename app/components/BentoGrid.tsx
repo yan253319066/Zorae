@@ -22,7 +22,7 @@ export default function BentoGrid() {
             </div>
             <h3 className="text-2xl font-display font-bold text-white group-hover:text-cyan-300 transition-colors">Finite Character Scarcity</h3>
             <p className="text-sm text-gray-400 leading-relaxed font-light">
-              There are only a mathematically limited number of pronounceable 6-letter domains. As venture funding pours into AI platforms, short brandable assets have become the ultimate bottleneck. Purchasing **zorae.ai** secures your brand authority before competitive startups lock you out of your identity.
+              There are only a mathematically limited number of pronounceable 6-letter domains. As venture funding pours into AI platforms, short brandable assets have become the ultimate bottleneck. Purchasing zorae.ai secures your brand authority before competitive startups lock you out of your identity.
             </p>
           </div>
           <div className="pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-500">

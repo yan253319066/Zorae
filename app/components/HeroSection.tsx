@@ -23,7 +23,7 @@ export default function HeroSection({ onAcquireClick }: HeroSectionProps) {
       </h1>
 
       <p className="hero-subtitle text-lg md:text-xl text-gray-400 max-w-3xl mb-12 font-sans font-light leading-relaxed">
-        Acquire a highly brandable, liquid 6-letter digital asset. Dual-syllable elegance paired with the gold-standard <span className="text-white font-medium font-mono">.AI</span> extension, purpose-crafted for next-generation systems, AI copilots, or modern tech brands.
+        zorae.ai is a premium 6-letter .ai domain name available for acquisition. It offers a short, brandable, pronounceable digital identity purpose-crafted for next-generation AI platforms, copilots, and technology brands. The domain is transferable via secure escrow with 24-hour ownership transfer.
       </p>
 
       <div className="hero-ctas flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-20">

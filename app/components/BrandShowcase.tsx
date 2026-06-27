@@ -19,7 +19,7 @@ export default function BrandShowcase({ activeBrandTab, onTabChange }: BrandShow
               Brand Sandbox: Zorae in Action
             </h2>
             <p className="text-gray-400 max-w-2xl font-light">
-              Toggle through mock brand directions to see how **zorae.ai** immediately adapts to different high-growth industries.
+              Toggle through mock brand directions to see how zorae.ai immediately adapts to different high-growth industries.
             </p>
           </div>
 

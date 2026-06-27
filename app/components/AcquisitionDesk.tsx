@@ -37,7 +37,7 @@ export default function AcquisitionDesk({
               Acquisition Offer
             </h2>
             <p className="text-gray-400 font-light leading-relaxed text-sm">
-              We accommodate serious offers and secure transactional frameworks. The acquisition of **zorae.ai** is designed to be frictionless, safe, and immediate.
+               We accommodate serious offers and secure transactional frameworks. The acquisition of zorae.ai is designed to be frictionless, safe, and immediate.
             </p>
           </div>
 
