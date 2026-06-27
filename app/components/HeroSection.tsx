@@ -1,13 +1,7 @@
-'use client';
-
 import { ArrowRight, Coins, Sparkles } from 'lucide-react';
 import { domainStats } from '../data';
 
-interface HeroSectionProps {
-  onAcquireClick: () => void;
-}
-
-export default function HeroSection({ onAcquireClick }: HeroSectionProps) {
+export default function HeroSection() {
   return (
     <section className="relative pt-28 pb-24 md:pt-36 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
       <div className="hero-badge inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full px-4 py-1.5 text-xs text-cyan-300 font-mono mb-8 backdrop-blur-sm">
@@ -27,14 +21,14 @@ export default function HeroSection({ onAcquireClick }: HeroSectionProps) {
       </p>
 
       <div className="hero-ctas flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-20">
-        <button
-          onClick={onAcquireClick}
-          className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white font-semibold flex items-center justify-center gap-2 shadow-xl shadow-cyan-500/10 hover:shadow-cyan-400/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group cursor-pointer"
+        <a
+          href="#offer-desk"
+          className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white font-semibold flex items-center justify-center gap-2 shadow-xl shadow-cyan-500/10 hover:shadow-cyan-400/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
         >
           <Coins className="w-5 h-5" />
           Acquire Domain
           <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-        </button>
+        </a>
 
       </div>
 

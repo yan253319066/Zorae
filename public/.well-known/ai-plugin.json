@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Zorae AI Domain",
+  "name_for_model": "zorae_domain",
+  "description_for_human": "Browse and acquire the premium AI domain zorae.ai.",
+  "description_for_model": "Plugin for accessing information about the premium .ai domain zorae.ai which is available for acquisition. Users can learn about domain stats, positioning, and submit acquisition offers.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.zorae.ai/openapi.json"
+  },
+  "logo_url": "https://www.zorae.ai/favicon.svg",
+  "contact_email": "hello@zorae.ai",
+  "legal_info_url": "https://www.zorae.ai"
+}

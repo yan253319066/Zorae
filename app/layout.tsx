@@ -85,6 +85,8 @@ const jsonLd = {
       publisher: {
         '@type': 'Organization',
         name: 'zorae.ai',
+        url: siteUrl,
+        logo: `${siteUrl}/favicon.svg`,
       },
       inLanguage: 'en-US',
     },
@@ -101,17 +103,22 @@ const jsonLd = {
       },
       offers: {
         '@type': 'Offer',
-        price: '0',
         priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          price: '0',
-          priceCurrency: 'USD',
-          valueAddedTaxIncluded: false,
-        },
         availability: 'https://schema.org/InStock',
         businessFunction: 'https://schema.org/Sell',
       },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${siteUrl}/#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: siteUrl,
+        },
+      ],
     },
     {
       '@type': 'FAQPage',

@@ -1,0 +1,96 @@
+# zorae.ai — Premium AI Domain Name for Sale
+
+> A short, brandable, pronounceable 6-letter .ai domain name available for acquisition via secure escrow transfer.
+
+## Site Overview
+
+- **URL**: https://www.zorae.ai
+- **Type**: Single-page domain marketplace / premium digital property showcase
+- **Language**: English (en-US)
+- **Tech Stack**: Next.js 15 (React 19), TypeScript, Tailwind CSS 4, GSAP, Cloudflare D1 (for offer submissions)
+
+## Domain Details
+
+- **Domain**: zorae.ai
+- **Length**: 6 letters
+- **Syllables**: 2 (Zo-rye)
+- **Extension**: .ai (generic TLD for artificial intelligence)
+- **Pronunciation**: /ˈzɔːr.eɪ/ ("Zohr-ay")
+- **Status**: Available for acquisition
+- **Transfer**: Secure escrow (Escrow.com, Dan.com, Sedo, Namecheap Push)
+- **History**: Clean domain history, no penalties, easy to index
+- **Structure**: C-V-C-V-V (Consonant-Vowel-Consonant-Vowel-Vowel)
+
+## Why zorae.ai
+
+- **Brandability**: Coined name with no generic dictionary limitations — can own any meaning
+- **SEO Authority**: Google treats .ai as a gTLD with equal ranking weight to .com
+- **AI-Native**: The .ai extension is the gold standard for artificial intelligence brands
+- **Memorability**: Short 6-letter, dual-syllable structure with liquid phonetics
+- **VC Credibility**: Signals premium positioning to investors, partners, and talent
+
+## Domain Statistics
+
+- Domain Length: 6 Letters — Short, premium, high recall
+- Extension: .AI — Gold standard for artificial intelligence
+- Pronounceability: Perfect — Liquid, global dual-syllable sound
+- Keyword Value: Brandable — No generic dictionary limitations
+- SEO Authority: Excellent — Clean history, easy to index
+- Acquisition Safety: 100% Secure — Escrow contract transfer
+
+## Potential Use Cases
+
+- AI agent platform or framework
+- Generative AI creative suite
+- Enterprise AI orchestration layer
+- AI-powered personal assistant / copilot
+- Machine learning / deep learning startup
+- Robotics or automation brand
+- AI research lab
+- Immersive spatial computing platform
+- Context-aware AI companion
+
+## Brand Mockups / Positioning Concepts
+
+### Zorae Labs (Enterprise AI Agent Frameworks)
+> "Orchestrating the Next Era of Cognitive Systems"
+Enterprise-grade platform for deploying multi-agent AI networks. Targets enterprise teams automating complex cognitive workflows.
+
+### Zorae Studio (Generative Spatial & Media Suite)
+> "Your Canvas. Amplified by Infinite Creativity."
+Creative standard for spatial computing. Generates immersive 3D architectures, audio scores, and visual narrative sequences.
+
+### Zorae AI (Context-Aware Assistant & Copilot)
+> "The Dawn of Intelligent Personal Companionship"
+Personal operating system integrated with calendar, workflows, and spatial devices for proactive executive support.
+
+## Key Pages
+
+- [Homepage](https://www.zorae.ai) — Domain overview, stats, and acquisition desk
+- [Submit Offer](https://www.zorae.ai#offer-desk) — Direct offer submission via secure form
+
+## Acquisition Process
+
+1. Submit an offer through the acquisition portal with name, email, proposed amount, and vision
+2. Terms are agreed upon
+3. Transfer handled via secure escrow service (Escrow.com, Dan.com, or Sedo)
+4. Authorization codes delivered securely
+5. Registrar push or pull transfer completed in under 24 hours
+
+## Available Actions
+
+- Submit an acquisition offer via the form at https://www.zorae.ai (POST to /api/offers with name, email, amount, vision)
+- Inquire about lease-to-own agreements (up to 12 months)
+- Explore startup equity arrangements for vetted founders
+
+## FAQ
+
+- **What is zorae.ai?** A premium 6-letter .ai domain name available for acquisition, ideal for AI startups, agents, copilots, or technology brands.
+- **Why .ai instead of .com?** Google treats .ai as a generic TLD with equal ranking weight to .com, while signalling technological relevance.
+- **How does acquisition work?** Submit an offer → agree terms → secure escrow transfer → ownership in under 24 hours.
+- **Is the transfer secure?** Yes — trusted escrow providers guarantee payment safety and immediate ownership transfer.
+- **Can I lease instead of buy?** Yes — lease-to-own up to 12 months and equity arrangements available.
+
+## Contact
+
+Submit an offer directly at https://www.zorae.ai or use the acquisition form on the page.

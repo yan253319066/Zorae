@@ -1,0 +1,75 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Zorae AI Domain API",
+    "description": "API for the zorae.ai premium domain marketplace.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://www.zorae.ai"
+    }
+  ],
+  "paths": {
+    "/api/offers": {
+      "post": {
+        "summary": "Submit an acquisition offer",
+        "description": "Submit a secure acquisition proposal for the zorae.ai domain.",
+        "operationId": "submitOffer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "email", "amount"],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Contact full name"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Business email address"
+                  },
+                  "amount": {
+                    "type": "number",
+                    "description": "Proposed offer amount in USD",
+                    "minimum": 500
+                  },
+                  "vision": {
+                    "type": "string",
+                    "description": "Optional branding vision or startup concept"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Offer submitted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "status": { "type": "string", "enum": ["pending"] }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "500": {
+            "description": "Server error"
+          }
+        }
+      }
+    }
+  }
+}

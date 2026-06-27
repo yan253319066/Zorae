@@ -1,8 +1,8 @@
-import type {MetadataRoute} from 'next';
-
-const siteUrl = 'https://www.zorae.ai';
+import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const siteUrl = 'https://www.zorae.ai';
+
   return [
     {
       url: siteUrl,
